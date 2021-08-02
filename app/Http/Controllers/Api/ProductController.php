@@ -11,7 +11,7 @@ class ProductController extends Controller
     // begin get products
     public function getProducts()
     {
-        $getProduct    =   Product::limit(3)->get(['id','image','name','category_id','currency','price','rent_type','average_ratings','total_ratings','total_reviews','refundable','coupon_code','size','tenure']);
+        $getProduct    =   Product::limit(3)->get(['id','image','name','currency','price','rent_type']);
         return response()->json([
             'success'                   =>  true,
             'lists'                     =>  $getProduct
